@@ -82,3 +82,78 @@
     });
   </script>
 {% endif %}
+
+{% if page.smartdown == true %}
+  <script>
+  /* global smartdown */
+  var icons = {};
+  /*var baseURL = '{{ site.baseurl }}/';*/
+  var baseURL = 'https://unpkg.com/smartdown/dist/';
+
+  var multiparts = null;
+
+  function exampleLoaded() {
+    /* eslint no-invalid-this: 0 */
+    var sourceText = this.responseText;
+    multiparts = smartdown.partitionMultipart(sourceText);
+    console.log('exampleLoaded', sourceText);
+    console.log('multiparts', multiparts);
+    var output = document.getElementById('blog-content');
+    smartdown.setHome(multiparts._default_, output, function() {
+
+
+
+
+
+    });
+  }
+
+  function loadURL(url) {
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", exampleLoaded);
+    oReq.open("GET", url);
+    oReq.send();
+  }
+
+  function loadInline() {
+    smartdown.loadCardsFromDocumentScripts();
+    var s = smartdown.smartdownScripts[0];
+
+    multiparts = smartdown.partitionMultipart(s.text);
+    var output = document.getElementById('blog-content');
+    smartdown.setHome(multiparts._default_, output, function() {
+    });
+  }
+
+  function loadExample() {
+    loadURL('blog/home.md');
+  }
+
+  function cardLoader(cardKey) {
+    var part = multiparts[cardKey];
+    if (part) {
+      var output = document.getElementById('blog-content');
+      smartdown.setHome(part, output, function() {
+      smartdown.startAutoplay(output);
+      });
+    }
+    else {
+      var cardURL = cardKey;
+      console.log('cardKey/cardURL', cardKey, cardURL);
+      if (cardKey.indexOf('http') === 0) {
+        cardURL = cardKey;
+      }
+      loadURL(cardURL);
+    }
+  }
+
+  var calcHandlers = smartdown.defaultCalcHandlers;
+  const linkRules = [];
+
+  smartdown.initialize(icons, baseURL, loadInline, cardLoader, calcHandlers, linkRules);
+  </script>
+
+{% endif %}
+
+
+

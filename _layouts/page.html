@@ -23,6 +23,12 @@ layout: default
     </div>
   </header>
 
+{% if page.smartdown == true %}
+  <div class="container-fluid smartdown-outer-container smartdown-theme">
+      <div class="col-xs-12 smartdown-container" id="blog-content">
+      </div>
+  </div>
+{% else %}  
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
@@ -32,3 +38,4 @@ layout: default
       </div>
     </div>
   </div>
+{% endif %}
