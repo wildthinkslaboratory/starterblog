@@ -76,3 +76,6 @@ layout: default
   </div>
   {% endif %}
 
+{% if site.disqus.shortname %}
+  {% include comments.html %}
+{% endif %}
