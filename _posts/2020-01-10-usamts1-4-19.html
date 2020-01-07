@@ -3,10 +3,11 @@ layout: post
 title: USAMTS Competition Problem Explorables
 date: 2020-01-04
 smartdown: true
+background: '/img/jet-nebula.jpg'
 categories: [ usamts, challenge ]
 ---
 
-The USA Mathematical Talent Search [USAMTS](https://www.usamts.org) is a unique mathematical competition for middle school and high school students.  Previous competitions contain a treasure trove of challenging, thought provoking and remarkably accessible problems.  I'm going to write some interactive apps for a few these problems so that it's easier to get to the heart of each problem.  Here's my first problem. 
+The USA Mathematical Talent Search [USAMTS](https://www.usamts.org) is a unique mathematical competition for middle school and high school students.  Previous competitions contain a treasure trove of challenging, thought provoking and remarkably accessible problems.  I'm going to write some interactive apps for a few these problems so that it's easier for more people to get to the heart of each problem.  Here's my first problem. 
 
 
 ### USAMTS 2018-2019 Problem Set 1 
@@ -22,7 +23,7 @@ const myDiv = this.div;
 myDiv.style.width = '100%';
 myDiv.style.height = '100%';
 myDiv.style.margin = 'auto';
-myDiv.style.background = '#DDDDDD';
+myDiv.style.background = '#EEEEEE';
 myDiv.style.borderRadius = '8px';
 
 
@@ -41,7 +42,7 @@ let unit = canvasWidth - 2 * xMargin;  // how wide should the triangle be
 // 1. set the green target interval
 // 2. set the position of first point
 let numClicks = 0;  
-let pink = [240,0,200];
+let pink = [250,20,100];
 let showPQ = false;
 
 // our X and Y points are between 0 and 1.  We need to convert them to 'pixels' to scale
@@ -76,6 +77,7 @@ let altPoint = function(x,y) {
 let [startX, startY] = altPoint(0,0);
 let X = startX;
 let Y = startY;
+
 
 // find the X coordinate (relative to triangle) from a mouse position (relative to app window)
 let getXfromMousePosition = function(p) {
@@ -119,7 +121,7 @@ let drawY2 = function() {
   Y = startY
   makeMove(0, startY);
   p5.fill('black');
-  p5.text('Y1', getX(X), getY(Y) - 10);
+  p5.text('Y2', getX(X), getY(Y) - 10);
   p5.ellipse(getX(X), getY(Y), 5);
   X = startX;
   Y = startY
@@ -165,15 +167,18 @@ let drawTriangle = function() {
   if (showPQ) {
     drawTargetInterval();
   }
-            
+  
+  // draw the start point
+  p5.fill(pink);
+  p5.ellipse(getX(X), getY(Y), 10);
+
   p5.pop();
 };
 
-p5.setup = function() {                          // this function is called when you start the
+p5.setup = function() {                          // this function is called when you start the app
 
   p5.createCanvas(canvasWidth,canvasHeight);     // create the canvas we will draw on
   p5.windowResized();  
-  drawTriangle(); 
   p5.noLoop();                                  
 };
 
@@ -181,8 +186,13 @@ p5.setup = function() {                          // this function is called when
 p5.windowResized = function() {                  // this function is called when the user changes
   canvasWidth = p5.windowWidth * widthScale;  // the size of the window.  It will rescale all the
   canvasHeight = p5.windowWidth * heightScale;    // components to fit into the new window size.
-
   p5.resizeCanvas(canvasWidth, canvasHeight);
+
+  xMargin = canvasWidth * 0.1;   // margins for the main triangle
+  yMargin = xMargin;
+  unit = canvasWidth - 2 * xMargin;  // how wide should the triangle be
+  drawTriangle();
+
 }
 
 
@@ -209,6 +219,18 @@ let makeMove = function( moveX, moveY )
   p5.pop();
 }
 
+p5.mousePressed = function() {
+
+  if (p5.mouseX > 0 + xMargin && 
+    p5.mouseX < canvasWidth - xMargin && 
+    p5.mouseY > 0 && 
+    p5.mouseY < canvasHeight) {
+    X = getXfromMousePosition(p5.mouseX);
+    Y = f(X);
+    drawTriangle();
+  }
+
+}
 
 smartdown.setVariable('P', 0.7);
 smartdown.setVariable('Q', 0.8);
@@ -249,16 +271,22 @@ this.depend = function() {
         smartdown.setVariable('reset', false);
       } 
       
-      drawTriangle();
       prevP = env.P;
       prevQ = env.Q;
       const [rx, ry] = altPoint(0,0);
       X = rx;
       Y = ry;
+      drawTriangle();
   }
 };
 
 ```
 [P](:-P/0/1/0.01)  
 [Q](:-Q/0/1/0.01)
-[:arrow_left:](:=left=true) [:arrow_down:](:=down=true) [reset](:=reset=true)
+[fly left](:=left=true) [fly down](:=down=true) [reset](:=reset=true) [Application Notes](::appnotes/tooltip)
+
+# :::: appnotes
+- you can adjust the interval $[P,Q]$ with the $P$ and $Q$ sliders.
+- use the buttons to fly left, fly down or reset the app to start over.
+- you can click on segment $\overline{AB}$ to reset the app and start a flight path from a specific point on  $\overline{AB}$.
+# ::::
