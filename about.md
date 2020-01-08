@@ -1,7 +1,7 @@
 ---
 layout: page
 title: about 
-background: '/img/bg-about.jpg'
+background: '/img/Heidi.png'
 smartdown: true
 ---
 
@@ -38,6 +38,4 @@ My name is Heidi Dixon and I have a passionate interest in mathematics education
 - US Patent 7440942B2: [Database Manipulations Using Group Theory](https://patents.google.com/patent/US7440942B2/en) Heidi E. Dixon, Matthew L. Ginsberg, David Hofer and Eugene M. Luks
 
 
-#### Picture
 
-![](/smartblog/img/HeidiSmall.png)  
