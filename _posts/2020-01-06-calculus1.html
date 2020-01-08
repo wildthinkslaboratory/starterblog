@@ -29,8 +29,9 @@ but I find this general version of the rate relationship to be less intuitive fo
 $$\text{distance} = \text{rate} \; \times \; \text{time}. $$
 So let's assume for now that we're talking about a moving car and just remember that all of this can be generalized to anything that changes and has a rate of change.
 
-So we're talking about a moving car, and we have this relationship $d = r \times t$, but there are two ways to write it and they each have a different geometric representation. If we know the rate and the time, then finding the distance is an area problem. [d = r * t](:=speedToggle=true)  If instead we have the distance and the time and we want to find the rate, then we write this formula as $r = \frac{d}{t}$.  Finding the speed in terms of distance and time is a slope problem. [r = d / t](:=distanceToggle=true)   
+So we're talking about a moving car, and we have this relationship $d = r \times t$, but there are two ways to write it and they each have a different geometric representation. If we know the rate and the time, then finding the distance is an area problem. [show area](:=speedToggle=true)  If instead we have the distance and the time and we want to find the rate, then we write this formula as $r = \frac{d}{t}$.  Finding the speed in terms of distance and time is a slope problem. [show slope](:=distanceToggle=true)   
 
+[Application Notes](::instructions1/tooltip)
 ```javascript /playable/autoplay
 //smartdown.import=https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraphcore.js
 
@@ -217,8 +218,7 @@ this.depend = function() {
 };
 
 ````
-[r = d / t](:=distanceToggle=true) [d = r * t](:=speedToggle=true) Rate [](:-Speed/0/3/0.1) [](:!Speed)
-[Application Notes](::instructions1/tooltip)
+[show slope](:=distanceToggle=true) [show area](:=speedToggle=true) Rate [](:-Speed/0/3/0.1) [](:!Speed)
 
 # :::: instructions1
 - Drag the red and green dots to the left and the right to adjust the time period. 
@@ -231,7 +231,7 @@ So slopes and areas are two different geometric ways of expressing the same rela
 
 ## Adding More Areas and Slopes
 
-Imagine that **Curve A** describes the position of an object through time. It's a distance function.  Imagine we pick two points on the curve. [r = d / t](:=distanceToggle2=true) The slope of the line through these points tells us the average speed traveled during that time period.  **There is always a corresponding rectangle that expresses the distance traveled as the product of the rate and the time.** [d = r * t](:=speedToggle2=true)
+Imagine that **Curve A** describes the position of an object through time. It's a distance function.  Imagine we pick two points on the curve. [show points](:=distanceToggle2=true) The slope of the line through these points tells us the average speed traveled during that time period.  **There is always a corresponding rectangle that expresses the distance traveled as the product of the rate and the time.** [show area](:=speedToggle2=true)
 
 We can do this for multiple time periods. [multiple periods](:=toggleArray=true)
 We can make the time periods smaller. [10 time periods](:=segments=10)
@@ -453,8 +453,8 @@ this.depend = function() {
 
 
 ```
-Number of Divisions [](:-segments/1/100/1) [](:!segments) 
-[Application Notes](::instructions2/tooltip)
+Number of Divisions [](:-segments/1/100/1) [](:!segments) [Application Notes](::instructions2/tooltip)
+
 
 # :::: instructions2
 Drag the slider to the left and right.
