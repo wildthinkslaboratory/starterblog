@@ -7,6 +7,9 @@ smartdown: true
 
 My name is Heidi Dixon and I have a passionate interest in mathematics education.  I am a stay at home mom and a former research scientist and software engineer.  This blog is a place for me to share my latest prototypes for interactive math education.  
 
+##### Math Education
+
+I run the [wildthinks](https://wildthinks.org/#Home) website where I post explorable explanations of topics in computer science and mathematics.  I also coach the [GoldfishandRobin](https://www.youtube.com/channel/UCciX2VHmW7Ix_FVWQ_u4RwQ) YouTube channel.
 
 ##### Professional Work
 
