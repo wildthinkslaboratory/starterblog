@@ -5,6 +5,7 @@ date: 2020-01-17
 smartdown: true
 categories: explodingDots
 comments: false
+background: '/img/posts/expDots1.jpg'
 ---
 
 I first encountered James Tanton's [exploding dots](https://www.explodingdots.org/) about three years ago. I knew immediately that it was brilliant, but it has taken a few years of teaching exploding dots and reflection to clarify in my mind exactly **why** James Tanton's approach is so revolutionary. These are my thoughts and reflections as a mathematician and a teacher. Here, I argue that exploding dots is the first step in a desperately needed revision of mathematical notation.  I believe this revision in notation will allow us to change how we teach math.  Instead of teaching/telling students what math is and how to do it, we can give them a model of a system and let them invent and create the mathematics themselves.  If students are in the habit of creating mathematics as they learn, it's likely that many of them will at some point invent some mathematics that are original.
