@@ -9,7 +9,7 @@ My name is Heidi Dixon and I have a passionate interest in mathematics education
 
 ##### Math Education
 
-I run the [wildthinks](https://wildthinks.org/#Home) website where I post explorable explanations of topics in computer science and mathematics.  I also coach the [GoldfishandRobin](https://www.youtube.com/channel/UCciX2VHmW7Ix_FVWQ_u4RwQ) YouTube channel.
+I run the [wildthinks](https://wildthinks.org/#Home) website where I post explorable explanations of topics in computer science and mathematics.  I also mentor/coach the [GoldfishandRobin](https://www.youtube.com/channel/UCciX2VHmW7Ix_FVWQ_u4RwQ) YouTube channel.
 
 ##### Professional Work
 
