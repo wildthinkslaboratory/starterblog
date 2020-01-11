@@ -1,6 +1,6 @@
 ---
 layout: post
-title: USAMTS problem
+title: USAMTS Competition Problem Explorables
 date: 2020-01-17
 smartdown: true
 categories: usamts
