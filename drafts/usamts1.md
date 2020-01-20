@@ -1,13 +1,13 @@
 ---
 layout: post
 title: USAMTS Competition Problem Explorables
-date: 2020-01-17
+date: 2020-01-20
 smartdown: true
 categories: [ usamts ]
 comments: false
 ---
 
-The USA Mathematical Talent Search [USAMTS](https://www.usamts.org) is a unique mathematical competition for middle school and high school students.  Previous competitions contain a treasure trove of challenging, thought provoking and remarkably accessible problems.  I'm going to write some interactive apps for a few these problems so that it's easier for more people to get to the heart of each problem.  Here's my first problem. 
+The USA Mathematical Talent Search [USAMTS](https://www.usamts.org) is a unique mathematical competition for middle school and high school students.  Previous competitions contain a treasure trove of challenging, thought provoking and remarkably accessible problems.  I'm going to write some interactive apps for a few these problems so that it's easier for more people to get to the heart of each problem.  Here's the first problem. 
 
 
 ### USAMTS 2018-2019 Problem Set 1 
