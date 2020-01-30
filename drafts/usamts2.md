@@ -142,3 +142,4 @@ The following videos also might be helpful.
 
 ![thumbnail](https://www.youtube.com/watch?v=jvf6qXLaXAo)
 
+This problem suggest other interesting questions.  For example, what is the minimum number of mangos you need to add to make sure every one gets to eat one?  How do you do the sharing and eating to make this happen?  If you come up with other interesting questions or have a bug report  please leave a comment.
