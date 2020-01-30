@@ -8,7 +8,7 @@ comments: false
 background: '/img/posts/mangoes.jpg'
 ---
 
-The USA Mathematical Talent Search [USAMTS](https://www.usamts.org) is a unique mathematical competition for middle school and high school students.  Previous competitions contain a treasure trove of challenging, thought provoking and remarkably accessible problems.  I'm going to write some interactive apps for a few these problems so that it's easier for more people to get to the heart of each problem.  This is the second problem I've presented.  You can find the previous USAMTS problem [here](https://wildthinkslaboratory.github.io/smartblog/usamts/2020/01/17/usamts1.html).
+The USA Mathematical Talent Search [USAMTS](https://www.usamts.org) is a unique mathematical competition for middle school and high school students.  Previous competitions contain a treasure trove of challenging, thought provoking and remarkably accessible problems.  I'm writing some interactive apps for a few these problems so that it's easier for more people to get to the heart of each problem.  This problem is part of the 2019-2020 year problems, but it was in the first problem set and was due back in October 2019.  So it's too late for a submission and fair game for discussion.  This is the second problem I've presented.  You can find the previous USAMTS problem [here](https://wildthinkslaboratory.github.io/smartblog/usamts/2020/01/17/usamts1.html).
 
 
 ### USAMTS 2019-2020 Problem Set 1 
