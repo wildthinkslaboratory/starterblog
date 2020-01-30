@@ -702,8 +702,7 @@ function Dots(p5playable) {
 
     if (mouseOnBoxes() && currentId && currentId[0] !== DotEnum.UNDEF) {  // this is the end of a drag event
 
-      const [sendingBox, recievingBox] = getSendingAndRecievingBox();
-
+      const [sendingBox, recievingBox] = getSendingAndRecievingBox(); 
       if (recievingBox === sendingBox) {            // drag within a box
         updatePosition(currentId);
       }
@@ -727,7 +726,7 @@ function Dots(p5playable) {
         }
       }
     }
-    else {     
+    else {   
       resetDotPosition(currentId);
       // if (mouseOnBoxes()) {
       //   resetDotPosition(currentId);
