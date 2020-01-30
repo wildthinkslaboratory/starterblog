@@ -129,3 +129,16 @@ p5.mouseReleased = function() {                  // this function is called when
 
 ```
 
+### Resources
+
+If you liked this problem or want to check out some resources that might help you think about the problem, I suggest:
+
+1. [Exploding Dots Interactive Web Experience](https://www.explodingdots.org/)
+2. [G'Day Math: Exploding Dots Course](https://gdaymath.com/courses/exploding-dots/)
+
+The following videos also might be helpful.
+
+![thumbnail](https://www.youtube.com/watch?v=R4d2qQ7aeFg)
+
+![thumbnail](https://www.youtube.com/watch?v=jvf6qXLaXAo)
+
