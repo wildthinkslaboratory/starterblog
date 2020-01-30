@@ -1,6 +1,6 @@
 ---
 layout: post
-title: An Exploding Dots and the Future of Mathematical Notation
+title: The Exploding Dots Model Part 1
 date: 2020-01-17
 smartdown: true
 categories: explodingDots
@@ -8,110 +8,93 @@ comments: false
 background: '/img/posts/expDots1.jpg'
 ---
 
-Goals / To Do
 
-- get rid of preachy tone.
-- Make article readable for non eXp dots audience
-- Wolfram makes an interesting point about how notations can limit thinking and hold back mathematical breakthroughs. 
-- identify areas that need research.
-- cognitive load in information processing.
+### Introduction
 
----
-
-### Abstract
-
-We're a few years into the exploding dots revolution and for many of us, James Tanton's innovative approach to math curriculum has changed the way we teach and do math.  After a few years reflection, I wanted to share some of my experiences teaching exploding dots and how it has shaped my thinking about mathematics in general.  My first take away from exploding dots is that we need to radically rethink mathematical notation and the role it plays in both math education and math research.  Historical analysis of what constitutes good mathematical notation is remarkably slim and many of the criteria are completely outdated in a digital world.  I argue that current notational systems create an uneccessary burden on learners, teachers and mathematical researchers. Reducing the cognitive load required to decipher notational symbols should be an important criteria for good mathematical notation.  I have a lot of thoughts and questions.  Too many to fit in one post, so in this post I'll focus on the lessons of exploding dots for mathematical notation.  In my next post I'll argue that these notational changes seem to lead mathematical creativity at both the education and research level.
-
-
-
-
-
-### Intro
-
-I first encountered James Tanton's [exploding dots](https://www.explodingdots.org/) about three years ago. I knew immediately that it was brilliant, but it has taken a few years of teaching exploding dots and reflection to clarify in my mind exactly **why** James Tanton's approach is so revolutionary. These are my thoughts and reflections as a mathematician and a teacher. Here, I argue that exploding dots is the first step in a desperately needed revision of mathematical notation.  I believe this revision in notation will allow us to change how we teach math.  Instead of teaching/telling students what math is and how to do it, we can give them a model of a system and let them invent and create the mathematics themselves.  If students are in the habit of creating mathematics as they learn, it's likely that many of them will at some point invent some mathematics that are original.
-
-Second article will be on Nurturing Mathematical Creativity
+We're a few years into what I call **the exploding dots revolution** and for many of us, James Tanton's innovative approach to math curriculum has changed the way we teach and do math.  After a few years reflection, I wanted to share some of my experiences teaching exploding dots and how it has shaped my thinking about mathematics in general.  I have two major take aways, and both are rather involved so I'm going to divide them into two posts. My first take away from exploding dots is that we need to radically rethink mathematical notation and the role it plays in both math education and math research.  Historical analysis of what constitutes good mathematical notation is remarkably slim and many of the criteria are completely outdated in a digital world.  I argue that current notational systems create an uneccessary burden on learners, teachers and mathematical researchers. Reducing the cognitive load required to decipher notational symbols should be an important criteria for good mathematical notation.  In my next post I'll argue that notational changes like the ones we see in exploding dots seem to lead  to increased mathematical creativity in learners.  It's possible that a radical revision of mathematical notation might lead to increased mathematical creativity for learners in the short term and increased mathematical innovation in research areas in the long term.
 
 
 ### Syntax vs. Semantics: the Task of Doing Mathematics
 
-Discuss the model vs. the notation and how these two things interact in mathematics research and in mathematics education.
 
-	- model
-	- notation
-		- communication of ideas ( How can we agree on what is said? )
-		- proof of statements (include algebra in this area.  symbolic manipulation will always be part of math and will always require this cognitive skill. How can we agree on what is true? )
-
-I argue that these are two different tasks requiring different cognitive skills, but that the model skills are primary.  There may be two different notational systems for reasoning, with different properties.  If they are both correct, the mathematical results will be the same.
-
-The syntax is just a tool.  The model is the real thing.
-
-
-Let's break down the **doing** of mathematics into two parts.  The first part is to understand the [model](::model/tooltip).  The model may be a phyisical model like the *base machine* from exploding dots.  It's something we can build, see and manipulate.  Models can also be abstract.  For example, we might imagine a machine that counts.  Then we imagine the machine counting forever and never stopping.  Then we call the result of that machine's process infinity.  We can't build this machine and we might have some doubt about whether the result of a process that never ends is a meaningful idea, but the imagining of this machine provides a model for the concept of infinity.  The model is where the math lives.  It is where we see and where we understand.
+Let's break down the **doing** of mathematics into two parts.  The first part is to understand the [model](::model/tooltip).  The model may be a phyisical model like the *base machine* from exploding dots.  It's something we can build, see and manipulate.  Models can also be abstract.  For example, we might imagine a machine that counts.  Then we imagine the machine counting forever and never stopping.  Then we call the result of that machine's process infinity.  We can't build this machine and we might have some doubt about whether the result of a process that never ends is a meaningful idea, but the imagining of this machine provides a model for the concept of infinity.  
 
 [An aside on models](::modelaside)
 # :::: modelaside
 I'm side stepping some important issues around mathematical models.  Many mathematical topics may have more than one model. Some models may be better than others. There are also areas of mathematics that don't have a model rooted in the physical world.  However, mathematical questions that can't be phrased in terms of a physical process we can imagine are likely to be [formally independent](::formally_independent/tooltip).  Fortunately, you aren't likely to run into these types of questions in a K-12 math classroom.  
 # ::::
 
-
-
 # :::: model
 Here I mean **model** in the usual sense.   In first order logic the term model has a more specific definition.
 # ::::
-
 
 # :::: formally_independent
 A mathematical statement is [formally independent](https://en.wikipedia.org/wiki/Independence_(mathematical_logic)) if the truth of that statement cannot be proven or disproven within the standard axiom systems, such as Zermelo- Fraenkel set theory.  The [continuum hypothesis](https://en.wikipedia.org/wiki/Continuum_hypothesis) and the [axiom of choice](https://en.wikipedia.org/wiki/Axiom_of_choice) are examples of statements that are formally independent.
 # ::::
 
 
-The second part to the **doing** of mathematics is communicating about the model.  We need to write and read statements about the model.  We use these statements to share ideas about the model and to prove that they are true or false.  This is where notation enters the picture.  Notation is the set of symbols and arrangement of symbols we use to write statements about the model.  We use it to pose questions and to write answers.
+The second part to the **doing** of mathematics is writing and reading statements about the model.   This is where mathematical notation enters the picture.  Notation is the set of symbols and arrangement of symbols we use to write statements about the model.  We use these statements to communicate ideas about the model, to pose questions and to write solutions.  We also use these statements to write proofs. For example, if I have two algebraic expressions that are known to be equal, 
+$$2x - 4 = 3x$$
+I can derive a new equality that is the same as the first but with the symbols $ + 4$ added to both expressions.
+$$2x - 4 + 4 = 3x + 4$$
 
-Applying rules to sentences to produce new sentences. Symbolic reasoning.
+We manipulate the symbols in our sentence according to an established rule to derive a new statement about the model.  If the rules we use are correct (sound) and the original statement is true, then we've constructed a new true statement about our model.  This process is essential for proving mathematical results and it requires that we have a notational system to describe our model.  However, this kind of symbolic manipulation can be done without any knowledge of the model the statements are representing.  In fact this is a requirement of formal proof systems.  The notational syntax and inference rules are deliberately seperated from the meaning of the statements.  
+
+So in math, we work with the model to understand it, but we translate our thoughts about the model into statements written with symbols to communicate with others and to prove things about the model.  Working a problem through may require multiple translations back and forth between the model and the notation.  If we are solving a complex problem that requires a lot of inference, a common experience is to temporarily get lost in the symbolic reasoning side of mathematics, pushing symbols around.  During this time we may lose track of what the symbols mean in terms of the model.
+
+I believe that the thinking we do about the model and the thinking we do when working with the notation are two very different skill sets that likely use different parts of the brain.  I'm not sure if there is evidence, perhaps in the cognitive science literature, to back this up but I hope to do some reading in this area soon.  
+
+
 
 
 ### Historical Review of Mathematical Notation
 
+Recently I did some research to see what has been said and written about what constitutes good mathematical notation.  I found that remarkably little has been written about this topic.  The seminal book on mathematical notation is [*A History of Mathematical Notations*](https://www.amazon.com/History-Mathematical-Notations-Dover-Mathematics/dp/0486677664) written by Florian Cajori in 1928.  Since then, not much has happened.  I found a nice [survey paper](https://web.wpi.edu/Pubs/E-project/Available/E-project-110815-204313/unrestricted/notation.pdf) by Biletch, Kay and Yu, and there's an interesting [speech](https://www.stephenwolfram.com/publications/mathematical-notation-past-future/) by Stephen Wolfram on this topic.  
+
+How are mathematical notations created?  The answer is that notations have evolved in parallel with mathematics.  Our earliest notations reflect the problems they evolved to solve, such as commerce, counting money and goods and land surveying. The symbols we use are very old, most between 100 and 500 years old. The notations that have survived aren't necessarily the *best* ones.  As Cajori points out, there has never been any agreed upon criterial for what is good notation, nor any communal process for identifying or encouraging good notations. Our notations are often restricted by whatever form of writing was possible at the time, scratches in bones, clay tablets, pen and paper and most recently typesetting on printing presses. 
+
+Although there is no mechanism for encouraging or enforcing criteria for mathematical notation, some criteria have emerged from previous writing on the subject.  A good mathematical notation should be:
+
+| Criteria | Notes |
+| :-------------- |    :----  |
+| **precise** | Good notation must lend itself to symbolic manipulations for inference and proof writing.  This requires well formed unambiguous statements. |
+| **efficient to write** | Most notations were created in the era of pen and paper.  One purpose of notation was to act as shorthand for prose.  This criteria may be outdated in the digital age.|
+| **easy to typeset** | As mathematical documents moved from hand written to printed, this became an important criteria. This criteria is definitely outdated in the digital age.|
+| **language independent** | Hard to argue with this criteria.  One of the nice things about math notation is it's ability to transcend culture and language barriers. |
+| **easily extendable**| |
+| **easy to understand** | This is undoubtably important, but also very vague.|
+| **respect precedent** | This last one I added myself.  I didn't find many people saying that limiting notations to previously used ones is important, it just seems like it must have been important considering the fact that there have been so few innovations in mathetical notations. |
+
+
+A natural question to ask is: How do choices about mathematical notaion affect the learning process and how does it affect progress in mathematical research?  We don't seem to know.  I will argue that an important criteria for notation should be to decrease the cognitive burden of the task of interpreting symbols.  Deriving meaning from the symbols.  in other words translating between symbols and model.
+
+
+### Lessons from Exploding Dots
+
+MOdel:
+
+Exploding dots definitely has a very compelling model to work with (dots and boxes), but it also has a radical approach to notation.  Dr. Tanton had the audacity to abandon all historical notations and created instead a new notation that closely mirrors the model itself.  
+
+Notation: 
+
+he exploding dots often we'll write standard base ten numbers to annotate the dots and boxes, but these annotations arent' necessary, and they aren't the focus.
+
+examples?
+
+
+I suspect that he has greatly reduced the cognitive load required to encode and decode statements and also reduced the difficultly of task switching.  This leads to the interesting question: Can we design mathematical notation in a way that reduces the cognitive load of certain mathematical tasks?  Might this lead to deeper understanding of mathematical concepts by students and mathmaticians alike?
+
+
+
+
 For me, one of the main take aways of exploding dots and many other areas of James Tanton's innovative math curriculum is that we need to radically rethink mathematical notation and the role notation plays in both math education and math research.
 
-When I began work on this blog post, I did some research to see what has been said and written about what constitutes good mathematical notation.  I found that remarkably little has been written about this topic.  There doesn't seem to be any formal study of mathematic notation and how math research and math education is non existant.  What does exist doesn't question notation that is basically archaic.
 
-We could start from the ground up and reimagine mathematical notation.  Let's ignore for the moment the unanswered question of whether this is a good idea.  What's interesting to me is that no one seems to have considered this at all as an option.  
-
-For me, one of the main lessons from James Tanton's exploding dots is the the mathematical notation we use plays enormous role .
-
-There are a lot of questions, all without answers.  So this post I will be limited to sharing anecdotal evidence and posing questions and hypotheses.
-
-this is exactly what is necessary.  In many areas of mathematics, it's time to start over with an entirely new approach to mathematical notation.
-
-Literature recognizes that there may be more than one notation for something and we should choose the best one, (criteria?).  Mathematicians will make up new notation for new math.  Lacking: full understanding of role of notaion and rebuild notations that are more optimal.  We don't have to pick from established notations, we could begin again.  
+Propose a hypothesis.
 
 I propose that the main problem with current notation is cognitive load.  We are no longer constrained by earlier criteria needed for pen and paper, typography.  Computers show most notations.
 
 
-- there is remarkably little written about mathematical notation.  Few people have put forth requirements and there's no system to encourage the requirements are met. 
-- why do we have the notations that we do?  Because they are the best? The process of keeping and discarding notations over time is not impressive. In the end, Cajori criticized sharply that as a community, mathemati- cians do not have any effective cooperative mechanism that could smooth out the many conflicts and confusions in mathematical notations. 
-
-
-Mathematical notation is also archaic.  The notations we teach and use today were all developed ages ago during a time when all math was written painstakingly with pen and paper.  Our notations follow no standards or protocols.  It's a free for all of weird unintuitive symbols that evolved over time with each mathemetician adding on where others left off with no hope of a coherent strategy. 
-
-It's true that mathematicians tend to be very good at deciphering symbols.  They are so good at it that they don't really notice that they are doing it.  It's tempting to say that this is an important prerequisite for a career in mathematics.  But perhaps, if we had better notational systems we'd have an entirely different set of mathematicians.  Mathematicians wouldn't need such strong symbol reading skills and would have a skill set focosed on imagining, interpreting and proving things about models.  Which world do you want to do math in?
-
-
-### Requirements for notation
-
-Discuss historical requirements.  ( Not enforced though they may be. )
-
-- precise ( for well formed unambiguous statements )
-- efficient
-- language independent
-- Good notations should be extendable when new ideas emerge. 
-- Good notations should be typographically easy to produce.
-- easy to understand 
-
-
-### Lessons from Exploding Dots
 
 - efficient. (outdated)
 - precise  ( how formal? depends on context )
@@ -128,6 +111,13 @@ Discuss historical requirements.  ( Not enforced though they may be. )
 	- example from algebra.  letters to represent variables.  Wouldn't it be better to have a box.  The idea of a hidden or mystery element.  We know things about it and can infer more removing the mystery.  Our notation says none of this.  
 
 ### Cognitive Load
+
+Doing math requires at least two different cognitive tasks.  Constantly switching between the two tasks.  
+
+ [Flanker Test](https://www.psytoolkit.org/experiment-library/experiment_flanker.html)
+ [Stroop Test](https://www.psytoolkit.org/experiment-library/experiment_stroop.html)
+
+Task Switching is hard.
 
 1. My personal experience leads me to this model
 2. Math is aware of this Syntax vs. Semantics
@@ -185,4 +175,172 @@ An Analysis of Mathematical Notations: For Better or For Worse
 Barry Biletch, Kathleen Kay, & Hongji Yu
 
 
+Goals / To Do
 
+- get rid of preachy tone.
+- Make article readable for non eXp dots audience
+- Wolfram makes an interesting point about how notations can limit thinking and hold back mathematical breakthroughs. 
+- identify areas that need research.
+- cognitive load in information processing.
+
+---
+
+### Outline
+
+4. Exploding Dots notation 
+	- why does it work?
+	- the model and the notation are the same.
+	- hands on equations as another example of notation mirroring model.
+
+	Reducing Cognitive Load Hypothesis
+	- this research hasn't been done, but we have the methodology to test these questions.
+	- we shouldn't be afraid to start over.  
+	- requirement of respecting precedence (not making radical changes)
+
+7. Building a layered notational system.
+	- students learn to differentiate syntax from semantics and learn awareness of the two main tasks.  
+	- educational materials make these differences explicit.
+	- example app, maybe from calculus.
+
+
+Wolfram Speech
+- most notation is between 100 and 500 years old.
+Generally, this failure to see that one could name numerical variables is sort of an interesting case of the language or notation one uses preventing a certain kind of thinking. That's something that's certainly discussed in ordinary linguistics. In its popular versions, it's often called the Sapir–Whorf hypothesis.
+
+- the idea that mathematical notation shapes the math that we create.  And can limit it too.
+
+named vars as example of notation -> progress
+
+
+### Letter to Phil Morris
+
+I have a question about the cognitive tasks involved in doing mathematics. I am a mathematician and a teacher so I have no background psychology. I tend to break down the doing of mathematics into two sub tasks.  
+
+1. Thinking about the model. All mathematical concepts have an underlying model.  For example, in counting, the model could be some pebbles.  Models can be abstract rather than physical.  For example, we might imagine a machine that counts.  Then we imagine the machine counting forever and never stopping.  Then we call the result of that machine's process infinity.  We can't build this machine and we might have some doubt about whether the result of a process that never ends is a meaningful idea, but the imagining of this machine provides a model for the concept of infinity.  The primary task in mathematics is to think and reason about the model. This is often involves visual-spatial reasoning, but probably others.
+
+2. Ideas and concepts about the model need to be written down as statements so we can communicate our ideas and so logical inference can be used to prove ideas correct.  This requires mathematical notation, which is the set of symbols and arrangement of symbols we use to write statements about the model. This requires encoding and decoding notational statements. It also requires manipulating notational statements during inference.  For example, if I have a statement like
+
+2x - 4 = 3
+
+Then I'm allowed to manipulate it notationally by adding the symbols '+ 4' on both sides of the equal sign.  
+
+2x - 4 + 4 = 3 + 4
+
+This kind of rule can be applied correctly with no understanding of what the symbols mean.
+
+It feels like several very different tasks are involved that might use different parts of the brain.  In addition, the process of math requires people to shift rapidly and often between these tasks.  
+
+Recently, a man named James Tanton created a really fabulous math curriculum called exploding dots that everyone informally agrees has made a large amount of K-12 mathematics more enjoyable and easier to learn.  Upon reflection, I believe he has done two things.  First he has a very compelling model to work with.  Perhaps more importantly, he had the audacity to abandon all historical notations and created instead a new notation that closely mirrors the model itself.  I suspect that he has greatly reduced the cognitive load required to encode and decode statements and also reduced the difficultly of task switching.  This leads to the interesting question: Can we design mathematical notation in a way that reduces the cognitive load of certain mathematical tasks?  Might this lead to deeper understanding of mathematical concepts by students and mathmaticians alike?
+
+I'm having trouble finding my way through the cognitive science literature.  I'd love to find relavent research papers.
+
+
+
+
+### What is Exploding Dots?
+
+It's hard to explain exploding dots is in a few paragraphs. It's a large curriculum presenting familiar topics in a fundamentally new way.  The best way to understand it is to experience it. I recommend checking out the following sites if you're new to exploding dots and want to get a feel for it.
+
+1. [exploding dots interactive web experience](https://www.explodingdots.org/)
+2. [G'Day Math: Exploding Dots Course](https://gdaymath.com/courses/exploding-dots/)
+
+The [exploding dots app page]() is a fabulous interactive experience, but an equally compelling low tech experience can be had with pen and paper or by heading outside with a bucket of chalk and some pebbles.
+![thumbnail](https://www.youtube.com/watch?v=cwicTRuLT4Y)
+
+
+##### Short Description of Exploding Dots
+
+Exploding dots is a general introduction to [positional numeral systems](https://en.wikipedia.org/wiki/Positional_notation).  It explores grade school arithmetic in different base systems and connects it to arithmetic on polynomials.  In the process it covers large amounts of K-12 mathematics through a very broad yet integrated perspective.  It's intended for students in 4th grade and up. 
+
+It's all based on a simple model called a machine.  Here's an interactive example of a **two to one** or $\fbox{$\bullet$} \leftarrow \fbox{${\bullet \bullet}$}$ machine that you can play with.  If you have two dots in a box, you can drag one dot to the left creating an explosion.
+
+[Application Instructions](::app_instructions/tooltip)
+
+# :::: app_instructions
+- Click on a box to add a dot.
+- If there are at least two dots in a box, drag one of the dots to the left to create an explosion.
+- Click the **Add** button to toggle between adding dots and antidots.
+- If you drag a dot and an antidot together, they will annihilate each other.
+- and finally, drag a dot out of the box area to delete it
+# ::::
+
+```javascript /autoplay/p5js
+
+//xsmartdown.import=http://127.0.0.1:8080/dots.js
+
+
+// import the dots library
+//smartdown.import=/smartblog/assets/dots.js
+
+
+// this is the url for the background picture
+const bgURL = 'https://gist.githubusercontent.com/wildthinkslaboratory/ac98c0bb68ccf7528dc39fa1922d2bdb/raw/0fe1c494e0a94243f3b6d10dd38ef2a341d92f95/bgRedCream-20.jpg';
+
+
+// Adjust the surrounding DIV(s) a little
+const myDiv = this.div;                                  // This chunk of code is some HTML/CSS stuff
+myDiv.style.position = 'relative';                       // to make the playable look pretty
+myDiv.style['background-image'] = `url(${bgURL})`;
+myDiv.style['background-repeat'] = 'no-repeat';
+myDiv.style['background-size'] = 'cover';
+myDiv.style.height = '100%';
+myDiv.style.width = '100%';
+myDiv.style.padding = '0';
+myDiv.style.margin = '0';
+myDiv.style.overflow = 'hidden';
+myDiv.style.border = '5px solid gray';
+this.div.style.margin = '10px auto'; // shorthand for '10px auto 10px auto'
+this.div.innerHTML = '';
+myDiv.style.overflow = 'auto';
+
+const widthScale = 0.80;
+const heightScale = 0.5;
+const base = 2;               // set the base for the machine
+const numberBoxes = 5;         // set how many boxes you want
+
+var dots = new dotlib.Dots(p5, this.div);  // create the dots and boxes machine
+
+
+p5.setup = function() {                          // this function is called when you start the
+                                                 // playable. 
+  dots.setup(base, numberBoxes, 'red', false);     // initialize the machine with the base and number of boxes. 
+  var canvasWidth = p5.windowWidth * widthScale;   // set the size of the playable
+  var canvasHeight = p5.windowHeight * heightScale;
+  p5.createCanvas(canvasWidth,canvasHeight);     // create the canvas we will draw on
+  p5.windowResized();                            
+
+  dots.loadSounds();                             // load the sounds for the app            
+};
+
+
+p5.windowResized = function() {                  // this function is called when the user changes
+  const canvasWidth = p5.windowWidth * widthScale;   // the size of the window.  It will rescale all the 
+  const canvasHeight = p5.windowHeight * heightScale;    // components to fit into the new window size.
+  dots.windowResized(canvasWidth, canvasHeight);
+  p5.resizeCanvas(canvasWidth, canvasHeight);
+}
+
+
+p5.draw = function() {                           // this function gets called repeatedly in a loop.
+  dots.draw();                                   // The machine is redrawn multiple times a second.
+}
+
+
+p5.mousePressed = function()                     // this function is called everytime the user clicks the mouse
+{
+  dots.mousePressed();
+}
+
+
+p5.mouseDragged = function() {                   // this function is called everytime the user drags the mouse
+  dots.mouseDragged();
+}
+
+
+p5.mouseReleased = function() {                  // this function is called when the user releases the mouse 
+  dots.mouseReleased();                          // button after a click.
+}
+
+
+```
+It's true that mathematicians tend to be very good at deciphering symbols.  They are so good at it that they don't really notice that they are doing it.  It's tempting to say that this is an important prerequisite for a career in mathematics.  But perhaps, if we had better notational systems we'd have an entirely different set of mathematicians.  Mathematicians wouldn't need such strong symbol reading skills and would have a skill set focosed on imagining, interpreting and proving things about models.  Which world do you want to do math in?
