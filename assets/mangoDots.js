@@ -321,16 +321,16 @@ class Boxes {
       const colId = Math.floor((x - this.x) / this.boxW);
       const rowId = Math.floor((y - this.y) / this.boxW);
 
-      if (rowId == this.rows + 1) {
+      if (rowId == this.rows + 1) {  // bottom row of rectangle
         return this.rows + this.cols + colId;
       }
-      else if (rowId == 0) {
+      else if (rowId == 0) {  // top row of rectangle
         return this.cols - colId - 1;
       }
-      else if (colId == 0) {
-        return this.rows + rowId + 1;
+      else if (colId == 0) {  // left edge of rectangle
+        return this.cols + rowId - 1;
       }
-      else {
+      else {    // right edge of rectangle
         return 2 * this.cols + this.rows + (this.rows - rowId);
       }
     }
@@ -699,6 +699,8 @@ function Dots(p5playable) {
 
   /////////////////////////////////////////////////////////////////////////////////
   this.mouseReleased = function() {
+
+    
 
     if (mouseOnBoxes() && currentId && currentId[0] !== DotEnum.UNDEF) {  // this is the end of a drag event
 
