@@ -270,10 +270,10 @@ class Boxes {
     this.x = x;
     this.y = y;
     this.width = width;
-    this.height = height;
     this.cols = Math.ceil((this.N - 4) / 4) + 2;  
     this.rows = Math.ceil((this.N - 2 * this.cols) / 2);
-    this.boxW = this.height / this.cols;
+    this.boxW = this.width / this.cols;
+    this.height = this.boxW * (2 + this.rows);
     this.margin = 0.1 * this.boxW;
     this.round = this.boxW * 0.15;
     this.dotDiameter = this.boxW * 0.2;
@@ -284,8 +284,8 @@ class Boxes {
     this.x = boxesX;
     this.y = boxesY;
     this.width = width;
-    this.height = height;
-    this.boxW = this.height / this.cols;
+    this.boxW = height / this.cols;
+    this.height = this.boxW * (2 + this.rows);
     this.margin = 0.1 * this.boxW;
     this.round = this.boxW * 0.15;
     this.dotDiameter = this.boxW * 0.2;
