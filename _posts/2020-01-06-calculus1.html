@@ -26,7 +26,7 @@ $$15 = 3 \; \frac{\text{slices}}{\text{day}} \; \times 5 \; \text{days}$$
 
 In this case, the amount of pizza is changing relative to the number of days. More generally, we have some quantity $Y$ that is changing relative to some other quantity $X$. The total change in $Y$ is equal to the rate of change $\frac{\Delta Y}{\Delta X}$  times the units of $X$.  In practice, I think the most intuitive rate of change problem to think about is a moving object.  The distance traveled by an object is equal to the rate (or speed) of the object times the time spent moving.
 $$\text{distance} = \text{rate} \; \times \; \text{time}. $$
-For now, let's assume for now that we're talking about a moving car and just remember that all of this can be generalized to anything that changes and has a rate of change.
+For now, let's assume we're talking about a moving car and just remember that all of this can be generalized to anything that has a rate of change.
 
 So we're talking about a moving car, and we have this relationship $d = r \times t$, but there are two ways to write it and they each have a different geometric representation. If we know the rate and the time, then finding the distance is a multiplication problem which we can model as an area problem. [show area](:=speedToggle=true)  If the length and width of the rectangle have the values of *rate* and *time*, then the area of the rectangle will be the *distance* traveled.
 
@@ -42,7 +42,7 @@ const myDiv = this.div;
 myDiv.style.width = '100%';
 myDiv.style.height = '100%';
 myDiv.style.margin = 'auto';
-myDiv.innerHTML = `<div id='box1' class='jxgbox' style='height:500px;'>`;
+myDiv.innerHTML = `<div id='box1' class='jxgbox' style='height:400px;'>`;
 
 
 JXG.Options.axis.ticks.majorHeight = 40;
@@ -232,10 +232,8 @@ So slopes and areas are two different geometric ways of expressing the same rela
 
 ## Adding More Areas and Slopes
 
-Imagine that **Curve A** describes the position of an object through time. It's a distance function.  Imagine we pick two points on the curve. [show points](:=distanceToggle2=true) The slope of the line through these points tells us the average speed traveled during that time period.  **There is always a corresponding rectangle that expresses the distance traveled as the product of the rate and the time.** [show area](:=speedToggle2=true) It's just two different geometric ways of expressing the same relationship.
-
-We can do this for multiple time periods. [multiple periods](:=toggleArray=true)
-We can make the time periods smaller. [10 time periods](:=segments=10)
+Here are two pictures showing an object that is moving in space.  [see object move](:=play=true)
+The picture on the right shows the object moving up and down in space.  The picture on the left is a graph that shows the change in position over time.  Imagine we pick two points on the curve. [show points](:=distanceToggle2=true) The slope of the line through these points tells us the average speed traveled during that time period.  **There is always a corresponding rectangle that expresses the distance traveled as the product of the rate and the time.** [show area](:=speedToggle2=true) It's just two different geometric ways of expressing the same relationship. We can do this for multiple time periods. [multiple periods](:=toggleArray=true) We can make the time periods smaller. [10 time periods](:=segments=10)
 
 ```javascript /playable/autoplay
 //smartdown.import=https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraphcore.js
@@ -247,12 +245,16 @@ myDiv.style.width = '100%';
 myDiv.style.height = '100%';
 myDiv.style.margin = 'auto';
 myDiv.innerHTML = `<div id='box2' class='jxgbox' style='height:500px;'>`;
-myDiv.innerHTML = `<div id='left' style='height:700px; width:75%; float:left; border:1px solid gray;background:#FFFFFF;border-radius:8px;'></div><div id='right' style='height:700px; width:24%; float:left; border: 1px solid gray;background:#CCEEFF;border-radius:8px;';></div>`;
 
+myDiv.innerHTML = `<div id='left' style='height:500px; width:80%; float:left; border:1px solid gray;background:#FFFFFF;border-radius:8px;'></div><div id='right' style='height:500px; width:19%; float:left; border: 1px solid gray;background:#CCEEFF;border-radius:8px;';></div>`;
+
+let workspaceDivWidth = 0.80;
+let pictureDivWidth = 0.19;
+let pictureDivHeight = 500;
 
 JXG.Options.axis.ticks.majorHeight = 40;
 // create the board
-board1 = JXG.JSXGraph.initBoard('box2', {boundingbox:[-1,16,8,-4], keepaspectratio:false, axis:false});
+board1 = JXG.JSXGraph.initBoard('left', {boundingbox:[-1,16,8,-4], keepaspectratio:false, axis:false});
 
 var xaxis = board1.create('axis', [[0, 0], [1,0]], 
       {name:'t', 
@@ -274,13 +276,16 @@ var yaxis = board1.create('axis', [[0, 0], [0, 1]],
       });   
 
 
- 
 var d = function(t) { return Math.pow(t-4,4)/8 - 2 * (t-4) * (t-4) + 12; };
 var d_graph = board1.create('functiongraph', [d,0,8], {strokeColor:'#DDDDDD', strokeWidth:2});
 var dText = board1.create('text', [1.5,7, 'Curve A']);
 var s = function(t) { return 4 * Math.pow(t-4,3)/8 - 4 * (t-4); }
 var s_graph = board1.create('functiongraph', [s,0,8], {strokeColor:'purple', strokeWidth:4, visible:false});
 var sText = board1.create('text', [1.5,-2, 'Curve B'],{visible:false});
+let t = board1.create('point', [0,0], {visible:false});
+var p = board1.create('point', [
+  function() { return t.X(); }, 
+  function() { return d(t.X()); }], {color:'blue', name:''});
 
 var tinylines = board1.create('curve', [[0],[0]],{strokecolor:'blue', strokeWidth:2, visible:false}); 
 tinylines.updateDataArray = function() { 
@@ -373,6 +378,57 @@ var sheightText = board1.create('text', [t2.X() + 0.1, slope/2, 'r'], {fontSize:
 var sareaText = board1.create('text', [ t1.X() + (t2.X() - t1.X())/2,  slope/2 + 0.2, 'd'], {fontSize:12, visible:false});
 
 
+let board2 = JXG.JSXGraph.initBoard('right', {boundingbox:[-1,16,2,-4], keepaspectratio:false, axis:false});
+
+var board2Yaxis = board2.create('axis', [[0, 0], [0, 1]], 
+      {name:'d', 
+      withLabel: true, 
+      label: {
+        fontSize: 20,
+        position: 'rt',  // possible values are 'lft', 'rt', 'top', 'bot'
+        offset: [-30, -20]   // (in pixels)
+        }
+      });  
+
+var board2Xaxis = board2.create('axis', [[0, 0], [1,0]], 
+      {name:'', 
+      withLabel: false,
+      label: {
+        fontSize: 20,
+        position: 'rt',  // possible values are 'lft', 'rt', 'top', 'bot'
+        offset: [-20, 20]   // (in pixels)
+      },
+      majorHeight:0
+      });
+
+board2Xaxis.removeAllTicks();
+
+board1.addChild(board2);
+
+var p2 = board2.create('point', [
+  1.2, 
+  function() { return p.Y(); }], {color:'blue', name:'', size:6});
+
+// let rocketurl = 'https://gist.githubusercontent.com/wildthinkslaboratory/ac98c0bb68ccf7528dc39fa1922d2bdb/raw/cab590371e4346929cf9096e53d163e772e1d132/rocket.png';
+// let rocket = board1.create('image',[rocketurl, [0.9,function() { return workspace.getArea() - 3000; }], [0.2,3000]]);
+
+// let p2 = board1.create('point',[1.2, 0],{visible:true});
+// let p3 = board1.create('point',[1.2, function() { return workspace.getArea(); }],{visible:false});
+
+// let dimensionLine = board1.create('segment', [p2,p3], {
+//   strokeColor:'#999999', 
+//   strokeWidth:2, 
+//   firstArrow:true, 
+//   lastArrow:true, 
+//   visible:true});
+
+// let dimensionText = board1.create('text', [
+//   1.3,
+//   function () { return workspace.getArea() / 2; },
+//   function() { return workspace.getArea().toFixed(0); }
+// ],{ strokeColor:'#999999', fontSize: 15, visible:true});
+
+
 smartdown.setVariable('segments', 3);
 var N = 3;
 var oldN = 3;
@@ -380,15 +436,31 @@ smartdown.setVariable('distanceToggle2', false);
 smartdown.setVariable('speedToggle2', false);
 smartdown.setVariable('toggleArray', false);
 smartdown.setVariable('toggleCurveB', false);
+smartdown.setVariable('play', false);
 var speedOn = false;
 var distanceOn = false;
 
 
+this.sizeChanged = function() {     
+  board1.resizeContainer(myDiv.offsetWidth * workspaceDivWidth, pictureDivHeight);
+  board2.resizeContainer(myDiv.offsetWidth * pictureDivWidth, pictureDivHeight);
+};
+
+var move = function() { 
+  t.moveTo([8,0],1000, {effect: '--', callback: function() {  t.moveTo([0,0]); } } ); 
+};
+
 // get the number of triangles from smartdown cell
-this.dependOn = ['segments','distanceToggle2','speedToggle2', 'toggleArray', 'toggleCurveB'];
+this.dependOn = ['segments','distanceToggle2','speedToggle2', 'toggleArray', 'toggleCurveB', 'play'];
 this.depend = function() {
 
   board1.suspendUpdate();
+
+  if (env.play == true) {
+    smartdown.setVariable('play', false);
+    move();
+
+  }
 
   if (env.distanceToggle2 == true && env.toggleArray == false) {
     d1.setAttribute({visible:true});
@@ -462,7 +534,7 @@ Number of Time Periods [](:-segments/1/100/1) [](:!segments) [Application Instru
 Drag the slider to the left and right.
 # ::::
 
-As the time periods get very small, the rectangles define a new function that relates to Curve A.  It's related by the function $d = r \cdot t$.  [show rectangle curve](:=toggleCurveB=true) This function gives the height of our rectangles, which is $r$, the rate at which the object is moving at a given time. It's our speed curve.
+As the time periods get very small, the rectangles define a new function that relates to our original curve.  It's related by the function $d = r \cdot t$.  [show rectangle curve](:=toggleCurveB=true) This function gives the height of our rectangles. Remember that the height of each skinny rectangle is the average speed the object travels during a very short time period.  As these rectangles get skinnier, this new curve becomes our speed curve.
 
 So this gives you a small glimpse of how this idea might be developed.  It would need to be developed more slowly together with motivation for why you might be interested in slopes and areas in the first place and how slopes and areas relate to a function.  But this is the nucleus of an idea.
 
