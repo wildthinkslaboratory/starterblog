@@ -201,6 +201,9 @@ this.sizeChanged = function() {
 
 ### Putting it all Together
 Here's my first prototype that attempts to maintain the mapping between the symbolic reasoning and the model. I'm using smartdown's [disclosables](https://smartdown.site/#gallery/Disclosables.md) to place the main ideas and symbolic reasoning next to the picture of the model.  I don't have very much control over the positioning of the disclosables so I've made them draggable.  There's a little black dot on each pop up that allows you to position them. It's also difficult to control the width of the pop ups.  A two column format might be a better solution with one column holding the picture and the second containing a slide show of the main anchor points.  Will talk to [Dan Kieth](https://doctorbud.com) (the smartdown guy) about how to make this better.
+
+This explanation is intended for students who are taking calculus and are familiar with calculus notation and ideas so many of the terms and notations aren't defined.  However, I think a non calculus student could still get the idea of what's happening here even if some of the notation and terms are unfamiliar.  
+
 [start explanation](:=start=true) [derivative](:=transition4=true)
 ```javascript /autoplay
 //smartdown.import=https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraphcore.js
@@ -405,6 +408,10 @@ this.depend = function() {
 };
  
 ```
+### Conclusion
+
+I plan to show this to Dan this week to give him a sense of what I want to achieve with these types of explanations.  The main goal is to keep all three parts of the explanation integrated so the reader never loses track of the big picture and the meaning of notational statements.  I hope to build and post an improved prototype soon.  Then I can easily integrate this approach into all my explanations.
+
 
 # :::: mi1
 ### Finding the Derivative
