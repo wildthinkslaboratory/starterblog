@@ -31,12 +31,17 @@ This explanation has three anchor ideas.
 
 ### Symbolic Reasoning
 Here's the symbolic reasoning we need to cover.  Most of it is algebra.
-$$f'(x) = \lim_{h \to 0}\frac{f(x+h) - f(x)}{h}$$
-$$f'(x) = \lim_{h \to 0}\frac{(x + h)^2 - x^2}{h}$$
-$$f'(x) = \lim_{h \to 0} \frac{x^2 + 2hx + h^2 - x^2}{h}$$
-$$f'(x) = \lim_{h \to 0} \frac{2hx + h^2}{h}$$
-$$f'(x) = \lim_{h \to 0} 2x + h$$
-$$f'(x) = 2x$$
+$$
+\begin{align}
+f'(x) = & \lim_{h \to 0}\frac{f(x+h) - f(x)}{h} \\
+f'(x) = & \lim_{h \to 0}\frac{(x + h)^2 - x^2}{h} \\
+f'(x) = & \lim_{h \to 0} \frac{x^2 + 2hx + h^2 - x^2}{h} \\
+f'(x) = & \lim_{h \to 0} \frac{2hx + h^2}{h} \\
+f'(x) = & \lim_{h \to 0} 2x + h \\
+f'(x) = & 2x
+\end{align}
+$$
+
 Just looking at it all alone without words or pictures drives home how disorienting the symbolic reasoning can  be even if it's clear and well written.
 
 ### Picture of the Model
@@ -44,7 +49,7 @@ I have two related pictures of the model I want to present.  The first is a pict
 
 
 #### Picture 1: Tangent Line
-You can drag the big red dot left and right to see different tangent lines.
+You can drag the red dot left and right to see different tangent lines.
 ```javascript /autoplay
 //smartdown.import=https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraphcore.js
 
@@ -86,7 +91,7 @@ let df = function(x) { return 2 * x; }
 let x = board0.create('glider', [1,0, xaxis], {name:'x', size:6});
 let fx = board0.create('point', [
 	function() { return x.X(); }, 
-	function() { return f(x.X()); }], {name:''})
+	function() { return f(x.X()); }], {name:'', color:'blue'})
 let graph_f = board0.create('functiongraph', [f,-10,10], {strokeColor:'#999999'});
 // let graph_df = board0.create('functiongraph', [df,-10,10],{strokeColor: '#11AA66', visible:true});
 let tangent = board0.create('line', [
@@ -200,7 +205,7 @@ this.sizeChanged = function() {
 ```
 
 ### Putting it all Together
-Here's my first prototype that attempts to maintain the mapping between the symbolic reasoning and the model. I'm using smartdown's [disclosables](https://smartdown.site/#gallery/Disclosables.md) to place the main ideas and symbolic reasoning next to the picture of the model.  I don't have very much control over the positioning of the disclosables so I've made them draggable.  There's a little black dot on each pop up that allows you to position them. It's also difficult to control the width of the pop ups.  A two column format might be a better solution with one column holding the picture and the second containing a slide show of the main anchor points.  Will talk to [Dan Kieth](https://doctorbud.com) (the smartdown guy) about how to make this better.
+Here's my first prototype that attempts to maintain the mapping between the symbolic reasoning and the model. I'm using smartdown's [disclosables](https://smartdown.site/#gallery/Disclosables.md) to place the main ideas and symbolic reasoning next to the picture of the model.  I don't have very much control over the positioning of the disclosables so I've made them draggable.  There's a little black dot on each pop up that allows you to position them. It's also difficult to control the width of the pop ups.  A two column format might be a better solution with one column holding the picture and the second containing a slide show of the main anchor points.  Will talk to [Dan Keith](https://doctorbud.com) (the smartdown guy) about how to make this better.
 
 This explanation is intended for students who are taking calculus and are familiar with calculus notation and ideas so many of the terms and notations aren't defined.  However, I think a non calculus student could still get the idea of what's happening here even if some of the notation and terms are unfamiliar.  
 
@@ -423,17 +428,21 @@ Drag the red dot to see the slope of the tangent line.
 
 # :::: mi2
 ### Derivatives are Slopes
-The derivative definition starts with the **slope** of a 
-secant line. See if you can understand why this expression 
-describes the slope by looking at the picture.
+The derivative definition starts with the **slope** of a secant line. 
+See if you can understand why this expression describes the slope by 
+looking at the picture.
 $$\frac{(x + h)^2 - x^2}{h}$$
 [Do some algebra](::algebra/button,transparent)
 # :::: algebra
-$$\frac{x^2 + 2hx + h^2 - x^2}{h}$$
-$$\frac{2hx + h^2}{h}$$
-$$2x + h$$
-The expression $2x + h$ represents the **slope** of the 
-secant line for all values of $x$ and $h$.
+$$
+\begin{align}
+\frac{x^2 + 2hx + h^2 - x^2}{h} &  & \textrm{combine like terms}  \newline
+\frac{2hx + h^2}{h}  &  & \textrm{cancel $h$ terms}   \newline
+2x + h &
+\end{align}
+$$
+The expression $2x + h$ represents the **slope** of the secant line 
+for all values of $x$ and $h$.
 # ::::
 [Back](:=transition1=true) [Next](:=transition3=true)
 # ::::
@@ -441,7 +450,7 @@ secant line for all values of $x$ and $h$.
 # :::: mi3
 #### Turn a Secant into a Tangent
 We can use a **limit** to turn a secant into a tangent.
-If we drag the green dot towards the red dot 
+If we drag the green dot $x+h$  towards the red $x$ dot 
 - the value of $h$ gets very small. **h** = [](:!hValue) 
 - the secant gets closer to the tangent 
 - the slope of the secant $2x + h$ gets close to $2x$.
