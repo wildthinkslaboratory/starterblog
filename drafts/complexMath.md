@@ -33,12 +33,12 @@ This explanation has three anchor ideas.
 Here's the symbolic reasoning we need to cover.  Most of it is algebra.
 $$
 \begin{align}
-f'(x) = & \lim_{h \to 0}\frac{f(x+h) - f(x)}{h} \\
-f'(x) = & \lim_{h \to 0}\frac{(x + h)^2 - x^2}{h} \\
-f'(x) = & \lim_{h \to 0} \frac{x^2 + 2hx + h^2 - x^2}{h} \\
-f'(x) = & \lim_{h \to 0} \frac{2hx + h^2}{h} \\
-f'(x) = & \lim_{h \to 0} 2x + h \\
-f'(x) = & 2x
+f'(x) & =  \lim_{h \to 0}\frac{f(x+h) - f(x)}{h} \\
+& =  \lim_{h \to 0}\frac{(x + h)^2 - x^2}{h} \\
+& =   \lim_{h \to 0} \frac{x^2 + 2hx + h^2 - x^2}{h} \\
+& =   \lim_{h \to 0} \frac{2hx + h^2}{h} \\
+& =   \lim_{h \to 0} 2x + h \\
+& =   2x
 \end{align}
 $$
 
