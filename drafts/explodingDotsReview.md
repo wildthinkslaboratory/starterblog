@@ -9,6 +9,8 @@ background: '/img/posts/expDots1.jpg'
 ---
 
 
+Analogy of Play with no distiction of stage direcetions and play content.
+
 ### Introduction
 
 We're a few years into what I call **the exploding dots revolution** and for many of us, James Tanton's innovative approach to math curriculum has changed the way we teach and do math.  After a few years reflection, I wanted to share some of my experiences teaching exploding dots and how it has shaped my thinking about mathematics in general.  I have two major take aways, and both are rather involved so I'm going to divide them into two posts. My first take away from exploding dots is that we need to radically rethink mathematical notation and the role it plays in both math education and math research.  Historical analysis of what constitutes good mathematical notation is remarkably slim and many of the criteria are completely outdated in a digital world.  I argue that current notational systems create an uneccessary burden on learners, teachers and mathematical researchers. Reducing the cognitive load required to decipher notational symbols should be an important criteria for good mathematical notation.  In my next post I'll argue that notational changes like the ones we see in exploding dots seem to lead  to increased mathematical creativity in learners.  It's possible that a radical revision of mathematical notation might lead to increased mathematical creativity for learners in the short term and increased mathematical innovation in research areas in the long term.
